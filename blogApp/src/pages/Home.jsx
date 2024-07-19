@@ -1,14 +1,14 @@
-const Home = (props) => {
-  props.isGoal == true ? <MadeGoal /> : <MissedGoal />;
+const Home = () => {
   return (
     <div>
-      Home Page
-      <br />
-      <button>True</button>
-      <button>False</button>
-      <br />
+      <h2>Home</h2>
+      <hr />
     </div>
   );
+};
+
+const Goal = (props) => {
+  return props.isGoal ? <MadeGoal /> : <MissedGoal />;
 };
 
 const MadeGoal = () => {
@@ -18,4 +18,5 @@ const MadeGoal = () => {
 const MissedGoal = () => {
   return <>Missed Goal oops</>;
 };
-export default Home;
+
+export { Home, Goal };
