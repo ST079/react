@@ -6,8 +6,10 @@ const App = () => {
   return (
     <>
       <Home />
+      <hr />
       <About title="About SuZan" />
-      <Contact formType="regestration"/>
+      <hr />
+      <Contact formType="regestration" />
     </>
   );
 };
