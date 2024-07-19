@@ -16,13 +16,14 @@ const Contact = (props) => {
 
   const [name, setName] = useState("");
   const checkRole = () => {
-    // setName(document.getElementById("role").value) === "sujan" ? (
-    //   <Admin />
-    // ) : (
-    //   <User />
-    // );
-    const name = setName(document.getElementById("role").value);
-    console.log(name);
+    setName(document.getElementById("role").value) === "sujan" ? (
+      <Admin />
+    ) : (
+      <User />
+    );
+  };
+  const notify = () => {
+    alert("mouse in");
   };
 
   return (
@@ -41,6 +42,11 @@ const Contact = (props) => {
       {name === "sujan" ? <Admin /> : <User />}
       <br />
       <button onClick={checkRole}>Submit</button>
+      <br />
+      <br />
+      <br />
+      <hr />
+      <button onMouseOver={notify}>Mouse position</button>
     </div>
   );
 };
