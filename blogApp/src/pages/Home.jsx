@@ -7,16 +7,4 @@ const Home = () => {
   );
 };
 
-const Goal = (props) => {
-  return props.isGoal ? <MadeGoal /> : <MissedGoal />;
-};
-
-const MadeGoal = () => {
-  return <>Goal!!!!!!</>;
-};
-
-const MissedGoal = () => {
-  return <>Missed Goal oops</>;
-};
-
-export { Home, Goal };
+export default Home;
