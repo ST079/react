@@ -1,10 +1,10 @@
+import React from 'react'
 import Table from "./components/Table";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import IsGoal from "./pages/IsGoal";
 import UserGeeting from "./pages/UserGeeting";
-
 import Colour from "./pages/Colour";
 
 const App = () => {
