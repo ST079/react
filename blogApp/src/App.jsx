@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Table from "./components/Table";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import IsGoal from "./pages/IsGoal";
 import UserGeeting from "./pages/UserGeeting";
 import Colour from "./pages/Colour";
+import Object from "./pages/Object";
+import Question1 from "../Questions/Question1";
 
 const App = () => {
   const users = [
@@ -18,6 +20,9 @@ const App = () => {
   ];
   return (
     <>
+      <Question1/>
+      <Object />
+      <hr />
       <Home />
       <hr />
       <About title="About SuZan" />
