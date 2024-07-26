@@ -8,6 +8,8 @@ import UserGeeting from "./pages/UserGeeting";
 import Colour from "./pages/Colour";
 import Object from "./pages/Object";
 import Question1 from "../Questions/Question1";
+import Question2 from "../Questions/Question2";
+import Question1_1 from "../Questions/Question1_1";
 
 const App = () => {
   const users = [
@@ -20,7 +22,14 @@ const App = () => {
   ];
   return (
     <>
-      <Question1/>
+      <Question1_1 />
+      <br />
+      <br />
+      <br />
+      <hr />
+      <Question2 />
+      <hr />
+      <Question1 />
       <Object />
       <hr />
       <Home />
