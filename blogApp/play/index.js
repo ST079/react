@@ -9,16 +9,35 @@ import axios from "axios";
 
 // axios.get("https://dummyjson.com/posts").then(({ data }) => console.log(data));
 
-const fetchData = async () => {
-  //   const posts = await axios.get("https://dummyjson.com/posts");
-  //   const { data } = posts;
-  //   console.log(data );
-  try {
-    const { data } = await axios.get("https://dummyjson.com/posts");
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
-};
+// const fetchData = async () => {
+//   //   const posts = await axios.get("https://dummyjson.com/posts");
+//   //   const { data } = posts;
+//   //   console.log(data );
+//   try {
+//     const { data } = await axios.get("https://dummyjson.com/posts");
+//     return data;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
-fetchData();
+// fetchData();
+
+const posts = [
+  {
+    title: "sssss",
+    reac: {
+      like: 1,
+      dislike: 12,
+    },
+  },
+  {
+    title: "ssspppss",
+    reac: {
+      like: 100,
+      dislike: 12,
+    },
+  },
+];
+
+console.log(JSON.stringify(posts[0].reac));

@@ -3,16 +3,11 @@ const Table = ({ header, data }) => {
     <div>
       <table border={1}>
         <thead>
-          {header.map((heads, index) => {
-            return (
-              <tr key={index}>
-                <th>{heads.id}</th>
-                <th>{heads.name}</th>
-                <th>{heads.email}</th>
-                <th>{heads.address}</th>
-              </tr>
-            );
-          })}
+          <tr>
+            {header.map((heads, index) => {
+              return <th key={index}>{heads}</th>;
+            })}
+          </tr>
         </thead>
         <tbody>
           {data.length > 0 ? (
@@ -20,15 +15,18 @@ const Table = ({ header, data }) => {
               return (
                 <tr key={index}>
                   <td>{index + 1}</td>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>{user.address}</td>
+                  <td>{user.title}</td>
+                  <td>{user.body}</td>
+                  <td>{user.tags}</td>
+                  <td>{JSON.stringify(user.reactions)}</td>
+                  <td>{user.views}</td>
+                  <td>{user.userId}</td>
                 </tr>
               );
             })
           ) : (
             <tr>
-              <td colSpan={4}>Sorry couldnt find any data</td>
+              <td colSpan={header.length}>Sorry couldnt find any data</td>
             </tr>
           )}
         </tbody>
