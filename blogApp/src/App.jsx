@@ -8,6 +8,8 @@ import UserGeeting from "./pages/UserGeeting";
 import Colour from "./pages/Colour";
 import UseEff from "./pages/UseEff";
 import Timer from "./pages/Timer";
+import CountDown from "./pages/CountDown";
+import SearchWIthEff from "./pages/SearchWIthEff";
 
 const App = () => {
   // const users = [
@@ -17,8 +19,10 @@ const App = () => {
   // ];
   return (
     <>
-      <Timer />
-      
+      <CountDown />
+      <hr />
+      <SearchWIthEff />
+
       {/* <UseEff />
       <hr />
       <Home />

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import moment from "moment";
 const Timer = () => {
   const [count, setCount] = useState(776000);
   useEffect(() => {

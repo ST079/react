@@ -1,4 +1,4 @@
-const Table = ({ header, data }) => {
+const Table = ({ header, body }) => {
   return (
     <div>
       <table border={1}>
@@ -10,17 +10,23 @@ const Table = ({ header, data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.length > 0 ? (
-            data.map((user, index) => {
+          {body.length > 0 ? (
+            body.map((user, index, header) => {
               return (
                 <tr key={index}>
-                  <td>{index + 1}</td>
+                  <td>{user.id}</td>
                   <td>{user.title}</td>
-                  <td>{user.body}</td>
+                  <td>{user.description}</td>
+                  <td>{user.category}</td>
+                  <td>{user.price}</td>
+                  <td>{user.discountPercentage}</td>
+                  <td>{user.rating}</td>
+                  <td>{user.stock}</td>
                   <td>{user.tags}</td>
-                  <td>{JSON.stringify(user.reactions)}</td>
-                  <td>{user.views}</td>
-                  <td>{user.userId}</td>
+                  <td>{user.brand}</td>
+                  <td>{user.sku}</td>
+                  <td>{user.weight}</td>
+                  <td>{JSON.stringify(user.dimensions)}</td>
                 </tr>
               );
             })
