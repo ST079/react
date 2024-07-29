@@ -8,10 +8,16 @@ const SearchWIthEff = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        //cleanup (subscriptions)
+        const controller = new AbortController();
+        const signal = controller.signal;
         const { data } = await axios(
-          `https://dummyjson.com/products/search?q=${query}`
+          `https://dummyjson.com/products/search?q=${query}`,
+          { signal }
         );
         setData(data?.products || []);
+        //cleanup
+        return () => controller.abort();
       } catch (error) {
         console.log(error);
       }

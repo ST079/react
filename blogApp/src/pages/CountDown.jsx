@@ -3,9 +3,10 @@ import moment from "moment";
 const CountDown = () => {
   const [time, setTime] = useState(moment(new Date("2024-10-07")).unix()); //for dashain
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setTime(time - 1);
     }, 1000);
+    return () => clearTimeout(timer);
   });
   return <div>{moment.unix(time).format("dddd MMMM Do YYYY, h:mm:ss a")}</div>;
 };

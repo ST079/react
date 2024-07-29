@@ -10,6 +10,7 @@ import UseEff from "./pages/UseEff";
 import Timer from "./pages/Timer";
 import CountDown from "./pages/CountDown";
 import SearchWIthEff from "./pages/SearchWIthEff";
+import Recipe from "./pages/Recipe";
 
 const App = () => {
   // const users = [
@@ -19,8 +20,9 @@ const App = () => {
   // ];
   return (
     <>
-      <CountDown />
-      <hr />
+      {/* <CountDown /> */}
+      {/* <Recipe /> */}
+
       <SearchWIthEff />
 
       {/* <UseEff />
