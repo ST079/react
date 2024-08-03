@@ -11,6 +11,10 @@ import Timer from "./pages/Timer";
 import CountDown from "./pages/CountDown";
 import SearchWIthEff from "./pages/SearchWIthEff";
 import Recipe from "./pages/Recipe";
+import Cform from "./pages/Cform";
+import Uform from "./pages/Uform";
+import Account from "./pages/Account";
+import Profile from "./pages/Profile";
 
 const App = () => {
   // const users = [
@@ -20,11 +24,14 @@ const App = () => {
   // ];
   return (
     <>
+      <Account />
+      <hr />
+      <Profile />
+      {/* <Uform /> */}
+      {/* <Cform/> */}
       {/* <CountDown /> */}
       {/* <Recipe /> */}
-
-      <SearchWIthEff />
-
+      {/* <SearchWIthEff /> */}
       {/* <UseEff />
       <hr />
       <Home />
