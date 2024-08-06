@@ -15,6 +15,9 @@ import Cform from "./pages/Cform";
 import Uform from "./pages/Uform";
 import Account from "./pages/Account";
 import Profile from "./pages/Profile";
+import LS from "./pages/LS";
+import Theme from "./pages/Theme";
+import "./App.css";
 
 const App = () => {
   // const users = [
@@ -24,11 +27,13 @@ const App = () => {
   // ];
   return (
     <>
-      <Account />
+      <Theme />
+      {/* <LS /> */}
+      {/* <Account /> */}
       <hr />
-      <Profile />
+      {/* <Profile /> */}
       {/* <Uform /> */}
-      {/* <Cform/> */}
+      {/* <Cform /> */}
       {/* <CountDown /> */}
       {/* <Recipe /> */}
       {/* <SearchWIthEff /> */}

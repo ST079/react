@@ -1,14 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
+import moment from "moment";
+import Account from "./Account";
 //Controlled Form
 const Cform = () => {
   const [form, setForm] = useState({
     fname: "",
     lname: "",
   });
+  const [user, setUser] = useState("");
+
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
 
   const handelSubmit = () => {
     alert(JSON.stringify(form));
   };
+
   return (
     <div>
       <form>
@@ -39,7 +49,13 @@ const Cform = () => {
         <button type="submit" onClick={handelSubmit}>
           Submit
         </button>
+        <br />
+     
+
+        <hr />
       </form>
+      count :{count}
+      <button onClick={increment}>+</button>
     </div>
   );
 };

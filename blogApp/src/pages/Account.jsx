@@ -5,7 +5,6 @@ const Account = () => {
   const context = useContext(UserContext);
   if (!context) throw new Error("Context is not wrapped inside provider");
   const { user, setUser } = context;
-
   return (
     <div>
       Account :{JSON.stringify(user)}
